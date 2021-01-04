@@ -20,12 +20,22 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: var(--secondary-color);
+  position: sticky;
 }
 
 header h2 {
   font-family: inherit;
   margin-top: 0;
   color: var(--accent-color);
+}
+header a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--primary-color);
+  /* text-decoration: underline; */
 }
 
 .search {
@@ -112,12 +122,20 @@ main {
   overflow-y: auto;
 }
 ::-webkit-scrollbar {
-  width: 0px; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
+  width: 10px;
 }
-/* Optional: show position indicator in red */
+
+::-webkit-scrollbar-track {
+  /* border-radius: 10px; */
+  background-color: transparent;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  height: 80%;
+  opacity: 0.8;
 }
 
 .movie:hover .overview {
