@@ -145,4 +145,12 @@ main {
     flex-grow: 1;
     width: 100%;
   }
+  ::-webkit-scrollbar {
+  width: auto; /* Remove scrollbar space */
+  background: auto; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
 }
