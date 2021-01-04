@@ -37,6 +37,7 @@ function showMovies(movies) {
         <div class="overview">
           <h3>Overview</h3>
           ${overview}
+          <br><a href="https://www.google.com/search?q=${title}" target="_blank" class="link">See More</a>
         </div>
       `;
     main.appendChild(movieEl);

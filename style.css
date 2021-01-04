@@ -64,6 +64,7 @@ main {
 }
 .movie img {
   width: 100%;
+  object-fit: cover;
 }
 
 .movie-info {
@@ -100,7 +101,7 @@ main {
 
 .overview {
   background-color: rgba(255, 255, 255, 0.96);
-  padding: 2rem;
+  padding: 1.8rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -108,8 +109,40 @@ main {
   max-height: 100%;
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
 }
 
 .movie:hover .overview {
   transform: translateY(0);
+}
+
+.overview .link {
+  color: var(--secondary-color);
+}
+
+.overview .link:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 580px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .search {
+    flex-grow: 1;
+    width: 100%;
+  }
 }
